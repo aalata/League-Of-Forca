@@ -1,0 +1,230 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:background="@drawable/forca_background_v2"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtPalavraEscondida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editTextLetra"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/imgPernaEsquerda"
+        android:layout_marginLeft="35dp"
+        android:text="@string/nada"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/btnTentar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtPalavraEscondida"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/txtPalavraEscondida"
+        android:layout_marginLeft="104dp"
+        android:onClick="btnTentar"
+        android:text="@string/tentar" />
+
+    <EditText
+        android:id="@+id/editTextLetra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnTentar"
+        android:layout_alignBottom="@+id/btnTentar"
+        android:layout_alignLeft="@+id/txtPalavraEscondida"
+        android:layout_alignRight="@+id/btnTentar"
+        android:layout_marginRight="96dp"
+        android:ems="10"
+        android:hint="@string/entrecomaletra" />
+
+    <ImageView
+        android:id="@+id/imageViewForca2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/imageviewdesc"
+        android:src="@drawable/corpo"
+        android:visibility="visible"
+        android:layout_above="@+id/imageViewForca1"
+        android:layout_alignParentLeft="true"/>
+
+    <ImageView
+        android:id="@+id/imageViewForca3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/imageviewdesc"
+        android:src="@drawable/corpo"
+        android:visibility="visible"
+        android:layout_alignParentLeft="true"
+        android:layout_above="@+id/imageViewForca2"/>
+
+    <ImageView
+        android:id="@+id/imgForcaTopo"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/background_dark"
+        android:contentDescription="@string/imageviewdesc"
+        android:src="@drawable/braco"
+        android:visibility="visible"
+        android:layout_above="@+id/imageViewForca3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:id="@+id/imgCabeca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/imageviewdesc"
+        android:src="@drawable/cabeca"
+        android:visibility="visible"
+        android:layout_toStartOf="@+id/imgBracoEsquerdo"
+        android:layout_toLeftOf="@+id/imgBracoEsquerdo"
+        android:layout_alignBottom="@+id/imgBracoDireito"
+        android:layout_alignRight="@+id/imgForcaTopo"
+        android:layout_alignEnd="@+id/imgForcaTopo" />
+
+    <ImageView
+        android:id="@+id/imgCorpo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/imageviewdesc"
+        android:src="@drawable/corpo"
+        android:visibility="visible"
+        android:layout_above="@+id/imgPernaDireita"
+        android:layout_alignLeft="@+id/imgPernaEsquerda"
+        android:layout_alignStart="@+id/imgPernaEsquerda" />
+
+    <ImageView
+        android:id="@+id/imageViewForca1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/txtPalavraEscondida"
+        android:layout_alignParentLeft="true"
+        android:contentDescription="@string/imageviewdesc"
+        android:maxWidth="20dp"
+        android:src="@drawable/corpo"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/imgBracoDireito"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imgCorpo"
+        android:layout_toLeftOf="@+id/imgCorpo"
+        android:contentDescription="@string/imageviewdesc"
+        android:src="@drawable/braco2"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/imgBracoEsquerdo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/editTextLetra"
+        android:layout_alignRight="@+id/editTextLetra"
+        android:layout_alignTop="@+id/imgCorpo"
+        android:contentDescription="@string/imageviewdesc"
+        android:src="@drawable/braco2"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/imgPernaEsquerda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imgBracoEsquerdo"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="4dp"
+        android:contentDescription="@string/imageviewdesc"
+        android:src="@drawable/pernadireita"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/imgPernaDireita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/imageViewForca1"
+        android:layout_toRightOf="@+id/imageViewForca1"
+        android:contentDescription="@string/imageviewdesc"
+        android:src="@drawable/pernaesquerda"
+        android:visibility="visible"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/imgCorpo"
+        android:layout_toStartOf="@+id/imgCorpo"
+        android:layout_alignLeft="@+id/imgBracoDireito"
+        android:layout_alignStart="@+id/imgBracoDireito" />
+
+    <TextView
+        android:id="@+id/txtLetrasUsadasTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imgForcaTopo"
+        android:layout_marginLeft="58dp"
+        android:layout_toRightOf="@+id/btnTentar"
+        android:text="@string/letrasjaforam"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/txtLetrasUsadas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtLetrasUsadasTitulo"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/txtLetrasUsadasTitulo"
+        android:layout_marginRight="36dp"
+        android:text="@string/nada"
+        android:textColor="@android:color/white"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/btnTentarPalavra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnTentar"
+        android:layout_alignBottom="@+id/btnTentar"
+        android:layout_alignParentRight="true"
+        android:onClick="btnTentarPalavra"
+        android:text="@string/tentarpalavra" />
+
+    <EditText
+        android:id="@+id/editTextTentarPalavra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btnTentar"
+        android:layout_toLeftOf="@+id/btnTentarPalavra"
+        android:layout_toRightOf="@+id/btnTentar"
+        android:ems="10"
+        android:hint="@string/palavra">
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/txtScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/txtLetrasUsadasTitulo"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/txtLetrasUsadasTitulo"
+        android:text="@string/score"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/txtNewScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/txtScore"
+        android:layout_alignEnd="@+id/btnTentarPalavra"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/btnTentarPalavra"
+        android:text="...."
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@android:color/white" />
+
+</RelativeLayout>
